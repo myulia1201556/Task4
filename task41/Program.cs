@@ -17,13 +17,13 @@ int[] CreateArrayRndInt(int arrays)
 {
     int[] array = new int[arrays];
     int i = 0;
-    if (num <= 10)
+    while (num <= 10 && i < num)
     {
-        Console.Write($"Введите {i + 1} элемент массива: ");
+        Console.Write($"Введите {i} элемент массива: ");
         array[i] = Convert.ToInt32(Console.ReadLine());
         i++;
     }
-    else
+    if (num > 10)
     {
         Console.WriteLine("Число элементов > 10, случайный метод заполнения:");
         while (i < num)
